@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "mql5-change-review",
+  "version": "1.0.0",
+  "release_date": "2026-11-08",
+  "source": "Snapshot of the user-installed skill; copied byte-for-byte without behavior changes.",
+  "files": {
+    "SKILL.md": "2c7d6a351d23ce459087d9bd531bae91b9d46a240531b1662b9f3ebe5b09759e",
+    "agents/openai.yaml": "f4b6e792e4189c6486285cb2c077ef50b4dfa123a8eda12bceabd757ef115634",
+    "assets/icon.svg": "8936b24f674a1250d999e2c2b5901374fb4240426f32bd1ae340c352a90d617d",
+    "references/ACCEPTANCE_PLAN.md": "a9d185dc51cdc0674a45831d241f7da9b7e91a2c874ac25979bfd9e4b4a1e066",
+    "references/REVIEW_CHECKLIST.md": "c20ec911b55fbed6a0ca88023a787df776e0403257a9c733e1a651d973bf8cdc"
+  }
+}

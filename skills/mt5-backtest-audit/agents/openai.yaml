@@ -1,0 +1,14 @@
+interface:
+  display_name: ممیزی بک‌تست MT5
+  short_description: Audit MT5 reports, settings, trades and evidence
+  default_prompt: Use $mt5-backtest-audit to audit these tester outputs and explain
+    whether the comparison is valid.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

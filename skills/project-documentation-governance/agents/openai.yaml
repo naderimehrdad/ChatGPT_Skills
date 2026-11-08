@@ -1,0 +1,14 @@
+interface:
+  display_name: Project Documentation Governance
+  short_description: Keep project documentation consistent and verified
+  default_prompt: Use $project-documentation-governance to inspect this project and
+    keep its documentation consistent with the work.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

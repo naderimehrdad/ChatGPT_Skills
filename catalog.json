@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "name": "project-documentation-governance",
+      "title_fa": "حاکمیت مستندات پروژه",
+      "version": "1.0.0",
+      "path": "skills/project-documentation-governance",
+      "manifest": "releases/project-documentation-governance/1.0.0.json",
+      "changelog": "changelogs/project-documentation-governance.md",
+      "description": "Read project documentation, preserve authority and validate changes."
+    },
+    {
+      "name": "mt5-backtest-audit",
+      "title_fa": "ممیزی بک‌تست MT5",
+      "version": "1.0.0",
+      "path": "skills/mt5-backtest-audit",
+      "manifest": "releases/mt5-backtest-audit/1.0.0.json",
+      "changelog": "changelogs/mt5-backtest-audit.md",
+      "description": "Audit tester evidence, effective inputs and trade reconciliation."
+    },
+    {
+      "name": "mql5-change-review",
+      "title_fa": "بازبینی تغییرات ربات MQL5",
+      "version": "1.0.0",
+      "path": "skills/mql5-change-review",
+      "manifest": "releases/mql5-change-review/1.0.0.json",
+      "changelog": "changelogs/mql5-change-review.md",
+      "description": "Review EA version changes, behavioral regressions and verification needs."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "executed_at_utc": "2026-11-08T03:43:15.483919+00:00",
+  "scope": "Local catalog, checksum, documentation and governance-script checks; no MT5 or EA runtime verification.",
+  "results": [
+    {
+      "command": "python3 scripts/validate_catalog.py",
+      "exit_code": 0,
+      "stdout": "Catalog validation: PASS (0 issue(s))\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_broken_document_link (test_catalog.CatalogTests.test_broken_document_link) ... ok\ntest_manifest_identity (test_catalog.CatalogTests.test_manifest_identity) ... ok\ntest_missing_payload (test_catalog.CatalogTests.test_missing_payload) ... ok\ntest_payload_mutation (test_catalog.CatalogTests.test_payload_mutation) ... ok\ntest_unsafe_manifest_path (test_catalog.CatalogTests.test_unsafe_manifest_path) ... ok\ntest_valid_catalog (test_catalog.CatalogTests.test_valid_catalog) ... ok\ntest_bootstrap_is_non_destructive (test_governance.GovernanceTests.test_bootstrap_is_non_destructive) ... ok\ntest_bootstrap_placeholders_fail_validation (test_governance.GovernanceTests.test_bootstrap_placeholders_fail_validation) ... ok\ntest_complete_documents_pass_validation (test_governance.GovernanceTests.test_complete_documents_pass_validation) ... ok\ntest_dry_run_writes_nothing (test_governance.GovernanceTests.test_dry_run_writes_nothing) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.340s\n\nOK\n"
+    },
+    {
+      "command": "python3 skills/project-documentation-governance/scripts/validate.py --project .",
+      "exit_code": 0,
+      "stdout": "Static validation: PASS (0 issue(s))\nManual review required: semantics, authority, evidence and unsupported link syntax.\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "name": "project-documentation-governance",
+  "version": "1.0.0",
+  "release_date": "2026-11-08",
+  "source": "Snapshot of the user-installed skill; copied byte-for-byte without behavior changes.",
+  "files": {
+    "SKILL.md": "1c0e900ceafa26013d2becce6d272582931bfdaa656b1b7e749aa83e21f8508a",
+    "agents/openai.yaml": "a04d8186474ebb9166411936301aa5168ff9a5fb1f4e8cea6e4a84bbfc79e93c",
+    "assets/icon.svg": "51a6923974188748638a424aa59b42b6afad2d910f910a1d43bb13ee10f3ce26",
+    "references/CONFLICT_RESOLUTION.md": "8aea896d08bb40467469586c3b4970c889b14ee48ae7200282ad6cd73a643755",
+    "references/DOCUMENTATION_STANDARD.md": "0af8d601b401ae69dc95770d416dcd3a17684229107b8892fa694308133560d2",
+    "references/LIFECYCLE_POLICY.md": "c46b83b47dfbdb9e23a8f15ca3144f6ab609eea3d649062251a60895eb9f5f3d",
+    "references/VALIDATION_RULES.md": "60c77b7666b7596b14230e9d8144076884b1f7a0f752fc507000147fff03d57a",
+    "scripts/bootstrap.py": "0342de5788301fa64f8e5a09723b1c6907a8fcae2b9ea799577b178643606618",
+    "scripts/common.py": "89eb417bb8f9e110493766c9536cefa640336c38335f9ee7b5035fde3b294679",
+    "scripts/validate.py": "8a04c3f7d324ae8de2405ae2fb704e9a95994fd5812781cd3eb0cade544d46f4"
+  }
+}

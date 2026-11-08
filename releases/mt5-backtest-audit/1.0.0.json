@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "name": "mt5-backtest-audit",
+  "version": "1.0.0",
+  "release_date": "2026-11-08",
+  "source": "Snapshot of the user-installed skill; copied byte-for-byte without behavior changes.",
+  "files": {
+    "SKILL.md": "d476d9474338cd8252eb1f526f7fb56751cae1403e7df376e8c939218b218016",
+    "agents/openai.yaml": "fb48baa2525e37ab6ebb860e894cd9b4e7d1a00235b3936d458dadfa57d7fd7f",
+    "assets/icon.svg": "e9301497fa98ef56aaca7ede0857b9a18dc06c34040f0679c609a6bf49b1d38b",
+    "references/EVIDENCE_PROTOCOL.md": "f60b7c63d2bdd13e3bb02f96771563092a4a2e20338949dd6cbbc12108de7753",
+    "references/RECONCILIATION.md": "420163d2cb2943479d5745f7313cdc35e1d4d6f2a4efb4eed5f94fe117228f87",
+    "references/REPORT_FORMAT.md": "992e6f8ff66a215c711786f9ae24c12f6ec80e4a5774eeb122c9363729801333"
+  }
+}

@@ -1,0 +1,14 @@
+interface:
+  display_name: بازبینی تغییرات ربات MQL5
+  short_description: Review MQL5 behavior changes and regression risks
+  default_prompt: Use $mql5-change-review to compare these EA versions, trace behavior
+    changes and define the required MT5 tests.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
