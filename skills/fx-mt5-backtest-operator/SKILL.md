@@ -2,7 +2,7 @@
 name: fx-mt5-backtest-operator
 description: Operate the user's GitHub Actions MT5 backtest queue from any EA-development chat; submit traceable tests, check run status, recover Drive uploads, verify audit evidence and report results without inventing metrics or rerunning completed tests.
 ---
-# Fx MT5 Backtest Operator — v1.0.0
+# Fx MT5 Backtest Operator — v1.1.0
 
 Use this skill for requests to run, monitor, retrieve or report MT5 backtests. Respond in the user's language (normally Persian). Keep execution infrastructure separate from trading-strategy optimization.
 
@@ -32,3 +32,10 @@ Use this skill for requests to run, monitor, retrieve or report MT5 backtests. R
 Return: plan/run ID and link; actual EA/SET/date/lot/account settings; verification status; concise metrics; archive URL; failure or recovery status; and any outstanding infrastructure issue. Do not switch into strategy advice unless requested.
 
 Read [operator contract](references/OPERATOR_CONTRACT.md) before modifying queue behavior or handling an upload recovery.
+
+## Real-tick history failures (mandatory)
+- All EA-development chats must use the shared `Fx_MT5_Operator` queue and its isolated terminal; never substitute a local/manual MT5 run without clearly saying so.
+- When `no history data` appears, inspect the exact downstream run, `test-status.json`, `history-preflight.json`, `tester-history.json`, and tester journal. Confirm requested symbol, broker/server when available, date interval, and effective tick model. Do not infer broker history coverage from cached files or from the presence of an MT5 terminal.
+- For `Model=4`, never silently downgrade to generated ticks. Record `HISTORY_UNAVAILABLE` and preserve the failed-run archive. Distinguish missing broker history, sync/network failures, and unknown causes; report unknown when logs cannot distinguish them.
+- Do not instruct the user to download history manually as the first action. Check whether the isolated tester can synchronize it automatically; only then provide a targeted manual procedure for the *isolated* MT5 instance, if necessary.
+- A failed tester is not a completed backtest, even if the workflow or archive upload is green. Never fabricate monthly returns, drawdowns, or profit metrics. Ask for the original run URL if connector discovery cannot locate it.
