@@ -1,9 +1,10 @@
 # ChatGPT Skills
 
-آرشیو نسخه‌دار سه اسکیل شخصی؛ فایل‌های داخل پوشه‌های اسکیل عین نسخهٔ نصب‌شده ثبت شده‌اند.
+آرشیو نسخه‌دار چهار اسکیل شخصی؛ فایل‌های داخل پوشه‌های اسکیل عین نسخهٔ نصب‌شده ثبت شده‌اند.
 
 | اسکیل | نسخه | تاریخچه |
 | --- | --- | --- |
+| [اپراتور بک‌تست MT5](skills/fx-mt5-backtest-operator/SKILL.md) | 1.0.0 | [لاگ تغییرات](changelogs/fx-mt5-backtest-operator.md) |
 | [حاکمیت مستندات پروژه](skills/project-documentation-governance/SKILL.md) | 1.0.0 | [لاگ تغییرات](changelogs/project-documentation-governance.md) |
 | [ممیزی بک‌تست MT5](skills/mt5-backtest-audit/SKILL.md) | 1.0.0 | [لاگ تغییرات](changelogs/mt5-backtest-audit.md) |
 | [بازبینی تغییرات ربات MQL5](skills/mql5-change-review/SKILL.md) | 1.0.0 | [لاگ تغییرات](changelogs/mql5-change-review.md) |
