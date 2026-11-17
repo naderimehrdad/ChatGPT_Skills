@@ -7,3 +7,7 @@ The target repository was empty at discovery: the GitHub tree endpoint returned 
 See TESTING.md for local verification records. Publication is verified separately by reading the remote commit/tree and comparing blob identities after upload; this document describes the prepared release rather than claiming unobserved remote state.
 
 No installed skill was modified by this export. Ongoing automatic synchronization is not configured.
+
+## 2026-11-17 update
+
+Added fx-mt5-backtest-operator 1.0.0 to the GitHub catalog. Publication is not installation. Cross-chat invocation and end-to-end validation are pending.
