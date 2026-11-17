@@ -27,6 +27,15 @@
       "manifest": "releases/mql5-change-review/1.0.0.json",
       "changelog": "changelogs/mql5-change-review.md",
       "description": "Review EA version changes, behavioral regressions and verification needs."
+    },
+    {
+      "name": "fx-mt5-backtest-operator",
+      "title_fa": "اپراتور بک‌تست MT5",
+      "version": "1.0.0",
+      "path": "skills/fx-mt5-backtest-operator",
+      "manifest": "releases/fx-mt5-backtest-operator/1.0.0.json",
+      "changelog": "changelogs/fx-mt5-backtest-operator.md",
+      "description": "Queue, execute, verify, recover and report MT5 backtests across EA development chats."
     }
   ]
 }
