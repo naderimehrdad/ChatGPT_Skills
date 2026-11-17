@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "name": "fx-mt5-backtest-operator",
+  "version": "1.0.0",
+  "release_date": "2026-11-17",
+  "source": "Authored cross-chat operating skill for the existing GitHub Actions MT5 operator.",
+  "files": {
+    "SKILL.md": "de6020112002b728afcdb37dbc5144417623b4dfd1a3d2cadc513b96d380b8d4",
+    "references/OPERATOR_CONTRACT.md": "77bc122246e2e1ccbda98535bb46519f8ae82b4a26dc8abeb6b1509d9a07a163"
+  }
+}
