@@ -2,7 +2,7 @@
 name: fx-mt5-backtest-operator
 description: Operate the user's GitHub Actions MT5 backtest queue from any EA-development chat; submit traceable tests, check run status, recover Drive uploads, verify audit evidence and report results without inventing metrics or rerunning completed tests.
 ---
-# Fx MT5 Backtest Operator — v1.1.0
+# Fx MT5 Backtest Operator — v1.2.0
 
 Use this skill for requests to run, monitor, retrieve or report MT5 backtests. Respond in the user's language (normally Persian). Keep execution infrastructure separate from trading-strategy optimization.
 
@@ -12,6 +12,14 @@ Use this skill for requests to run, monitor, retrieve or report MT5 backtests. R
 - Uploaded ZIP archives reside in the configured Google Drive folder; local archives remain on the self-hosted runner.
 - Never assume a repository path, EA binary, SET, workflow dispatch capability, or artifact is available: inspect current files and tools first.
 - Follow `project-documentation-governance` for repository changes and `mt5-backtest-audit` for performance/trade interpretation.
+
+## Execution environment and chaining (v1.2)
+- The Windows Server 2012 R2 self-hosted runner must run in an **interactive Administrator Windows session** (for example via `C:\\actions-runner\\run.cmd`), not Windows Service Session 0. MT5 CLI tester failed in Session 0 with exit 10053 even under Administrator; an interactive session successfully ran real-tick backtests. Treat this as an observed environment constraint, not a universal MT5 rule.
+- Keep the interactive runner running and the session available. Reboot, logoff, closing the runner console or restarting the Windows service may interrupt processing. Do not claim unattended boot persistence until separately implemented and verified.
+- Current operator uses `mt5-operator.yml` to directly `workflow_dispatch` `mt5-queue.yml` after a queued backtest; `mt5-queue.yml` also has scheduled 15-minute fallback. Direct chaining is intended to avoid `workflow_run` nesting limits. Verify the *actual run's commit* and the log marker `QUEUE_NEXT_TRIGGERED_IMMEDIATELY` before claiming immediate chaining worked.
+- The queue is processed on a single self-hosted runner. Avoid simultaneous or duplicate dispatch of the same plan from push/schedule/manual/completion events. The existing local completion ledger and attempt counts are not a transactional lock: inspect live runs and queue state, and escalate suspected duplicate dispatch instead of assuming concurrency is solved.
+- Queue plans can be marked `HISTORY_BLOCKED` or `FAILED_MAX_RETRIES` (three dispatch attempts). Report these explicitly; do not silently mark a period done or reset a blocked plan without investigating the failed run.
+- For monthly suites, identify which months are verified, which are dispatched, and which remain pending. A successful scheduler run is not a successful MT5 backtest.
 
 ## Before submitting
 1. Identify exact EA name and source revision, SET filename, symbol, timeframe, inclusive start/end dates, account capital and requested overrides (e.g. lot size). Obtain only essential missing details.
